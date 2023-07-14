@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MyKotlinApt"
 include ':app'
+include ':leon_compiler'
+include ':leon_annotation'
