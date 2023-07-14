@@ -1,6 +1,7 @@
 package com.leon.mykotlinapt
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.leon.ann.LeoClass
 import com.leon.leon_annotation.LeonAnn
 import com.leon.mykotlinapt.ui.theme.MyKotlinAptTheme
 
@@ -25,12 +27,12 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-//                    val leo = LeoClass()
-//                    val msg = leo.getMessage()
-//                    Log.i("TAG_ZLZ", msg)
+                    val leo = LeoClass()
+                    val msg = leo.message
+                    Log.i("TAG_ZLZ", msg)
 
 
-                    Greeting("Android")
+                    Greeting(msg)
                 }
             }
         }
