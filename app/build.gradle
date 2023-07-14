@@ -68,4 +68,7 @@ dependencies {
 
     implementation project(':leon_annotation')
     kapt project(':leon_compiler')
+
+//    implementation project( ':lib_java_annotation')
+//    kapt project(':lib_java_compiler')
 }
