@@ -16,3 +16,5 @@ rootProject.name = "MyKotlinApt"
 include ':app'
 include ':leon_compiler'
 include ':leon_annotation'
+include ':lib_java_annotation'
+include ':lib_java_compiler'
