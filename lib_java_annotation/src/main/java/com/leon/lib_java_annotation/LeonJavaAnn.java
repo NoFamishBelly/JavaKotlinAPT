@@ -7,10 +7,10 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.CLASS)
-public @interface Route {
+public @interface LeonJavaAnn {
 
-    String path();
+    String name();
 
 
-    String group() default "";
+    String data() default "";
 }

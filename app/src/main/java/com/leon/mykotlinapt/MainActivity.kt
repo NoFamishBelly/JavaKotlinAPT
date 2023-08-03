@@ -11,27 +11,24 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.leon.ann.LeoClass
-import com.leon.leon_annotation.LeonAnn
+import com.leon.ann.LeoKotlinClass
+import com.leon.leon_annotation.LeonKotlinAnn
 import com.leon.mykotlinapt.ui.theme.MyKotlinAptTheme
 
-@LeonAnn(name = "Leo", data = "这是MainActivity页面")
+@LeonKotlinAnn(name = "Leo", data = " Kotlin apt 信息")
+//@LeonJavaAnn(name = "Leo", data = " Java apt 信息")
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyKotlinAptTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
-                    val leo = LeoClass()
-                    val msg = leo.message
+                    val msg = testKotlinApt()
+//                    val msg = testJavaApt()
                     Log.i("TAG_ZLZ", msg)
-
-
                     Greeting(msg)
                 }
             }
@@ -39,10 +36,23 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
+fun testKotlinApt(): String {
+    val leo = LeoKotlinClass()
+    return leo.getMessage()
+}
+
+
+//fun testJavaApt():String{
+//    val leo = LeoClass()
+//    return leo.message
+//}
+
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Hello: $name",
         modifier = modifier
     )
 }
